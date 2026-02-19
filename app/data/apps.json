@@ -1,0 +1,105 @@
+[
+  {
+    "slug": "fireball",
+    "name": "Fireball",
+    "subtitle": "Gigaverse Autobattler",
+    "description": "A meta-game built on top of Gigaverse, showcasing AI-era gaming. Fireball pushes the frontier of what community builders can create — featuring autonomous dungeon agents, a full economy, and emergent game theory baked into every run.",
+    "builders": [
+      { "name": "Yanik", "handle": "@yanik_ai", "twitterUrl": "https://x.com/yanik_ai" },
+      { "name": "Dudendy", "handle": "@dudendy", "twitterUrl": "https://x.com/dudendy" },
+      { "name": "Sidlovskyy", "handle": "@sidlovskyy", "twitterUrl": "https://x.com/sidlovskyy" },
+      { "name": "Classicj", "handle": "@classicjordon", "twitterUrl": "https://x.com/classicjordon" },
+      { "name": "AirmanGaTaos", "handle": "@AirmanGaTaos", "twitterUrl": "https://x.com/AirmanGaTaos" }
+    ],
+    "keyFeatures": [
+      "Fireball metagame layer on Gigaverse",
+      "Dungeons autobattler with AI agents",
+      "Auto-fishing & auto gear repair",
+      "Player inventory and live stats",
+      "On-chain economy integration"
+    ],
+    "tags": ["Metagame", "Automation"],
+    "status": "active",
+    "launchUrl": "https://fireball.gg/",
+    "logo": "/images/fireball logo.png",
+    "screenshots": [
+      "/images/fireball (1).png",
+      "/images/fireball (2).png",
+      "/images/fireball (3).png",
+      "/images/fireball (4).png"
+    ]
+  },
+  {
+    "slug": "giganoob",
+    "name": "Giga Noob",
+    "subtitle": "Ultimate Gigaverse Dashboard",
+    "description": "Real-time analytics dashboard centralizing every financial and engagement metric that matters in Gigaverse. From revenue flows to loot box probabilities, Giga Noob surfaces the data hidden inside the game into a clean, actionable interface.",
+    "builders": [
+      { "name": "Nomad", "handle": "@NomadTreepwood", "twitterUrl": "https://x.com/NomadTreepwood" }
+    ],
+    "keyFeatures": [
+      "Financial overview & revenue tracking",
+      "User & engagement metrics",
+      "Marketplace insights & trends",
+      "Item details & rarity data"
+    ],
+    "tags": ["Analytics"],
+    "status": "active",
+    "launchUrl": "https://giganoob.com/",
+    "logo": "/images/giganoob logo.png",
+    "screenshots": [
+      "/images/giganoob (1).png",
+      "/images/giganoob (2).png",
+      "/images/giganoob (3).png",
+      "/images/giganoob (4).png"
+    ]
+  },
+  {
+    "slug": "juicedsh",
+    "name": "Juiced.sh",
+    "subtitle": "Gigaverse DEX Vault & Tools",
+    "description": "The power trader's toolkit for Gigaverse. Juiced.sh brings a full DEX experience — live order books, charting, PnL tracking, Vault Pool mechanics, and a Stub Deals Hub — all in one multi-tool interface built for serious players.",
+    "builders": [
+      { "name": "nRoni", "handle": "@i_ronni", "twitterUrl": "https://x.com/i_ronni" }
+    ],
+    "keyFeatures": [
+      "DEX trading with live order book",
+      "Stub Deals Hub",
+      "User & market analytics",
+      "Price & listing alerts",
+      "Vault Pool & raffles"
+    ],
+    "tags": ["Trading", "Tools"],
+    "status": "active",
+    "launchUrl": "https://juiced.sh/",
+    "logo": "/images/juicedsh logo.png",
+    "screenshots": [
+      "/images/juicedsh (1).JPG",
+      "/images/juicedsh (2).JPG",
+      "/images/juicedsh (3).JPG",
+      "/images/juicedsh (4).png"
+    ]
+  },
+  {
+    "slug": "teraverse",
+    "name": "Teraverse",
+    "subtitle": "Automation Tool for Dungeons",
+    "description": "Open-source automation built for Gigaverse dungeon runners. Teraverse handles the repetitive work — ROM management, energy claims, material collection — so you can focus on strategy. Fully configurable battle modes for every playstyle.",
+    "builders": [
+      { "name": "SLK", "handle": "@0xSLK", "twitterUrl": "https://x.com/0xSLK" }
+    ],
+    "keyFeatures": [
+      "Dungeon autobattler",
+      "Configurable battle modes",
+      "ROM management (energy & materials)",
+      "Open source"
+    ],
+    "tags": ["Automation"],
+    "status": "active",
+    "launchUrl": "https://teraverse.abstools.xyz/",
+    "logo": "/images/teraverse logo.png",
+    "screenshots": [
+      "/images/teraverse (1).JPG"
+    ]
+  }
+]
