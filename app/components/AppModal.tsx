@@ -11,7 +11,7 @@ interface AppModalProps {
 }
 
 const XSmallIcon = () => (
-  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
   </svg>
 );
@@ -47,14 +47,14 @@ export default function AppModal({ app, onClose }: AppModalProps) {
       style={{
         position: "fixed",
         inset: 0,
-        background: "rgba(0,0,0,0.75)",
+        background: "rgba(0,0,0,0.8)",
         zIndex: 1000,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         padding: "20px",
-        backdropFilter: "blur(8px)",
-        WebkitBackdropFilter: "blur(8px)",
+        backdropFilter: "blur(6px)",
+        WebkitBackdropFilter: "blur(6px)",
       }}
       role="dialog"
       aria-modal="true"
@@ -62,16 +62,16 @@ export default function AppModal({ app, onClose }: AppModalProps) {
     >
       <div
         ref={dialogRef}
-        className="animate-scale-in card-glass"
+        className="animate-slide-up pixel-border"
         style={{
           width: "100%",
           maxWidth: "740px",
           maxHeight: "90vh",
           overflowY: "auto",
           position: "relative",
-          borderRadius: "12px",
-          boxShadow:
-            "0 0 0 1px rgba(0,212,255,0.1), 0 32px 80px rgba(0,0,0,0.7)",
+          background: "#162942",
+          borderRadius: "2px",
+          boxShadow: "0 0 0 1px #1e3a5f, 0 32px 80px rgba(0,0,0,0.7), 0 0 40px rgba(0,212,255,0.05)",
         }}
       >
         {/* Close button */}
@@ -83,12 +83,12 @@ export default function AppModal({ app, onClose }: AppModalProps) {
             position: "absolute",
             top: "12px",
             right: "12px",
-            width: "30px",
-            height: "30px",
-            background: "rgba(8,13,20,0.85)",
-            border: "1px solid rgba(255,255,255,0.08)",
-            borderRadius: "6px",
-            color: "rgba(255,255,255,0.5)",
+            width: "28px",
+            height: "28px",
+            background: "#0a1628",
+            border: "1px solid #1e3a5f",
+            borderRadius: "2px",
+            color: "#8b9bb4",
             cursor: "pointer",
             display: "flex",
             alignItems: "center",
@@ -96,17 +96,18 @@ export default function AppModal({ app, onClose }: AppModalProps) {
             zIndex: 10,
             fontSize: "18px",
             lineHeight: 1,
-            transition: "all 200ms ease",
+            transition: "all 150ms ease",
+            fontFamily: "'Orbitron', sans-serif",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.color = "#ffffff";
-            e.currentTarget.style.borderColor = "rgba(0,212,255,0.4)";
-            e.currentTarget.style.background = "rgba(0,212,255,0.08)";
+            e.currentTarget.style.color = "#00d4ff";
+            e.currentTarget.style.borderColor = "#00d4ff";
+            e.currentTarget.style.boxShadow = "0 0 8px rgba(0,212,255,0.4)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.color = "rgba(255,255,255,0.5)";
-            e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
-            e.currentTarget.style.background = "rgba(8,13,20,0.85)";
+            e.currentTarget.style.color = "#8b9bb4";
+            e.currentTarget.style.borderColor = "#1e3a5f";
+            e.currentTarget.style.boxShadow = "none";
           }}
         >
           ×
@@ -118,9 +119,8 @@ export default function AppModal({ app, onClose }: AppModalProps) {
             position: "relative",
             width: "100%",
             aspectRatio: "16/9",
-            background: "linear-gradient(135deg, #0d1521 0%, #080d14 100%)",
+            background: "linear-gradient(135deg, #0d1f3c 0%, #0a1628 100%)",
             overflow: "hidden",
-            borderRadius: "12px 12px 0 0",
           }}
         >
           <Image
@@ -139,7 +139,7 @@ export default function AppModal({ app, onClose }: AppModalProps) {
               left: 0,
               right: 0,
               height: "80px",
-              background: "linear-gradient(to top, rgba(13,21,33,0.95), transparent)",
+              background: "linear-gradient(to top, rgba(22,41,66,0.95), transparent)",
               pointerEvents: "none",
             }}
           />
@@ -167,26 +167,27 @@ export default function AppModal({ app, onClose }: AppModalProps) {
                     transform: "translateY(-50%)",
                     width: "32px",
                     height: "32px",
-                    background: "rgba(8,13,20,0.8)",
-                    border: "1px solid rgba(255,255,255,0.1)",
-                    borderRadius: "6px",
-                    color: "rgba(255,255,255,0.8)",
+                    background: "#0a1628",
+                    border: "1px solid #1e3a5f",
+                    borderRadius: "2px",
+                    color: "#8b9bb4",
                     cursor: "pointer",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: "18px",
+                    fontSize: "20px",
                     lineHeight: 1,
-                    transition: "all 200ms ease",
-                    backdropFilter: "blur(4px)",
+                    transition: "all 150ms ease",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = "rgba(0,212,255,0.4)";
+                    e.currentTarget.style.borderColor = "#00d4ff";
                     e.currentTarget.style.color = "#00d4ff";
+                    e.currentTarget.style.boxShadow = "0 0 8px rgba(0,212,255,0.4)";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)";
-                    e.currentTarget.style.color = "rgba(255,255,255,0.8)";
+                    e.currentTarget.style.borderColor = "#1e3a5f";
+                    e.currentTarget.style.color = "#8b9bb4";
+                    e.currentTarget.style.boxShadow = "none";
                   }}
                 >
                   {char}
@@ -212,13 +213,13 @@ export default function AppModal({ app, onClose }: AppModalProps) {
                     style={{
                       width: i === activeScreenshot ? "20px" : "6px",
                       height: "4px",
-                      borderRadius: "2px",
-                      background: i === activeScreenshot ? "#00d4ff" : "rgba(255,255,255,0.3)",
+                      borderRadius: "0px",
+                      background: i === activeScreenshot ? "#00d4ff" : "#1e3a5f",
                       border: "none",
                       cursor: "pointer",
                       padding: 0,
-                      transition: "all 250ms cubic-bezier(0.4,0,0.2,1)",
-                      boxShadow: i === activeScreenshot ? "0 0 8px rgba(0,212,255,0.5)" : "none",
+                      transition: "all 150ms ease",
+                      boxShadow: i === activeScreenshot ? "0 0 8px rgba(0,212,255,0.6)" : "none",
                     }}
                   />
                 ))}
@@ -228,7 +229,7 @@ export default function AppModal({ app, onClose }: AppModalProps) {
         </div>
 
         {/* Content */}
-        <div style={{ padding: "22px 26px 28px" }}>
+        <div style={{ padding: "20px 24px 26px" }}>
           {/* Header row */}
           <div
             style={{
@@ -242,37 +243,39 @@ export default function AppModal({ app, onClose }: AppModalProps) {
             <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
               <div
                 style={{
-                  width: "42px",
-                  height: "42px",
-                  borderRadius: "8px",
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "2px",
                   overflow: "hidden",
-                  border: "1px solid rgba(255,255,255,0.08)",
+                  border: "1px solid #1e3a5f",
                   flexShrink: 0,
                 }}
               >
-                <Image src={app.logo} alt={`${app.name} logo`} width={42} height={42} style={{ objectFit: "cover" }} />
+                <Image src={app.logo} alt={`${app.name} logo`} width={40} height={40} style={{ objectFit: "cover" }} />
               </div>
               <div>
                 <h2
                   style={{
                     margin: 0,
-                    fontFamily: "'Sora', sans-serif",
-                    fontSize: "20px",
+                    fontFamily: "'Orbitron', sans-serif",
+                    fontSize: "16px",
                     fontWeight: 700,
                     color: "#ffffff",
-                    letterSpacing: "-0.3px",
+                    letterSpacing: "0.5px",
                     lineHeight: 1.2,
+                    textTransform: "uppercase",
                   }}
                 >
                   {app.name}
                 </h2>
                 <p
                   style={{
-                    margin: "3px 0 0",
-                    fontSize: "13px",
-                    color: "rgba(255,255,255,0.45)",
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontWeight: 400,
+                    margin: "4px 0 0",
+                    fontSize: "12px",
+                    color: "#8b9bb4",
+                    fontFamily: "'Rajdhani', sans-serif",
+                    fontWeight: 500,
+                    letterSpacing: "0.2px",
                   }}
                 >
                   {app.subtitle}
@@ -280,7 +283,7 @@ export default function AppModal({ app, onClose }: AppModalProps) {
               </div>
             </div>
 
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "5px", justifyContent: "flex-end", flexShrink: 0 }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "4px", justifyContent: "flex-end", flexShrink: 0 }}>
               {app.tags.map((tag) => <TagPill key={tag} tag={tag} />)}
             </div>
           </div>
@@ -289,7 +292,7 @@ export default function AppModal({ app, onClose }: AppModalProps) {
           <div
             style={{
               height: "1px",
-              background: "linear-gradient(to right, rgba(255,255,255,0.07), transparent)",
+              background: "#1e3a5f",
               marginBottom: "16px",
             }}
           />
@@ -299,24 +302,25 @@ export default function AppModal({ app, onClose }: AppModalProps) {
             style={{
               margin: "0 0 20px",
               fontSize: "13px",
-              color: "rgba(255,255,255,0.65)",
-              fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 400,
-              lineHeight: 1.75,
+              color: "#8b9bb4",
+              fontFamily: "'Rajdhani', sans-serif",
+              fontWeight: 500,
+              lineHeight: 1.7,
+              letterSpacing: "0.3px",
             }}
           >
             {app.description}
           </p>
 
           {/* Key features */}
-          <div style={{ marginBottom: "22px" }}>
+          <div style={{ marginBottom: "20px" }}>
             <p
               style={{
                 margin: "0 0 10px",
-                fontFamily: "'Fragment Mono', monospace",
-                fontSize: "10px",
-                fontWeight: 400,
-                letterSpacing: "0.15em",
+                fontFamily: "'Orbitron', sans-serif",
+                fontSize: "9px",
+                fontWeight: 600,
+                letterSpacing: "0.2em",
                 textTransform: "uppercase",
                 color: "#00d4ff",
               }}
@@ -340,14 +344,15 @@ export default function AppModal({ app, onClose }: AppModalProps) {
                     display: "flex",
                     alignItems: "flex-start",
                     gap: "8px",
-                    fontSize: "13px",
-                    color: "rgba(255,255,255,0.5)",
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontWeight: 400,
+                    fontSize: "12px",
+                    color: "#8b9bb4",
+                    fontFamily: "'Rajdhani', sans-serif",
+                    fontWeight: 500,
                     lineHeight: 1.5,
+                    letterSpacing: "0.2px",
                   }}
                 >
-                  <span style={{ color: "#00d4ff", fontSize: "5px", flexShrink: 0, marginTop: "5px" }}>●</span>
+                  <span style={{ color: "#00d4ff", fontSize: "8px", flexShrink: 0, marginTop: "3px" }}>◆</span>
                   {f}
                 </li>
               ))}
@@ -355,13 +360,7 @@ export default function AppModal({ app, onClose }: AppModalProps) {
           </div>
 
           {/* Divider */}
-          <div
-            style={{
-              height: "1px",
-              background: "linear-gradient(to right, rgba(255,255,255,0.07), transparent)",
-              marginBottom: "18px",
-            }}
-          />
+          <div style={{ height: "1px", background: "#1e3a5f", marginBottom: "18px" }} />
 
           {/* Builders + launch */}
           <div
@@ -377,11 +376,12 @@ export default function AppModal({ app, onClose }: AppModalProps) {
               <p
                 style={{
                   margin: "0 0 8px",
-                  fontFamily: "'Fragment Mono', monospace",
-                  fontSize: "10px",
-                  letterSpacing: "0.15em",
+                  fontFamily: "'Orbitron', sans-serif",
+                  fontSize: "9px",
+                  fontWeight: 600,
+                  letterSpacing: "0.2em",
                   textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.3)",
+                  color: "#8b9bb4",
                 }}
               >
                 Built by
@@ -397,26 +397,27 @@ export default function AppModal({ app, onClose }: AppModalProps) {
                       display: "inline-flex",
                       alignItems: "center",
                       gap: "5px",
-                      color: "rgba(255,255,255,0.5)",
+                      color: "#8b9bb4",
                       fontSize: "12px",
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontWeight: 500,
+                      fontFamily: "'Rajdhani', sans-serif",
+                      fontWeight: 600,
+                      letterSpacing: "0.3px",
                       textDecoration: "none",
                       padding: "4px 10px",
-                      border: "1px solid rgba(255,255,255,0.07)",
-                      borderRadius: "6px",
-                      background: "rgba(255,255,255,0.03)",
-                      transition: "all 200ms ease",
+                      border: "1px solid #1e3a5f",
+                      borderRadius: "2px",
+                      background: "#0a1628",
+                      transition: "all 150ms ease",
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.color = "#00d4ff";
-                      e.currentTarget.style.borderColor = "rgba(0,212,255,0.3)";
-                      e.currentTarget.style.background = "rgba(0,212,255,0.06)";
+                      e.currentTarget.style.borderColor = "#00d4ff";
+                      e.currentTarget.style.boxShadow = "0 0 8px rgba(0,212,255,0.3)";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.color = "rgba(255,255,255,0.5)";
-                      e.currentTarget.style.borderColor = "rgba(255,255,255,0.07)";
-                      e.currentTarget.style.background = "rgba(255,255,255,0.03)";
+                      e.currentTarget.style.color = "#8b9bb4";
+                      e.currentTarget.style.borderColor = "#1e3a5f";
+                      e.currentTarget.style.boxShadow = "none";
                     }}
                   >
                     <XSmallIcon />
@@ -437,7 +438,7 @@ export default function AppModal({ app, onClose }: AppModalProps) {
                 gap: "8px",
                 padding: "11px 22px",
                 textDecoration: "none",
-                borderRadius: "7px",
+                borderRadius: "2px",
               }}
             >
               Launch App

@@ -67,12 +67,12 @@ export default function AppBottomSheet({ app, onClose }: AppBottomSheetProps) {
       style={{
         position: "fixed",
         inset: 0,
-        background: "rgba(0,0,0,0.7)",
+        background: "rgba(0,0,0,0.8)",
         zIndex: 1000,
         display: "flex",
         alignItems: "flex-end",
-        backdropFilter: "blur(6px)",
-        WebkitBackdropFilter: "blur(6px)",
+        backdropFilter: "blur(4px)",
+        WebkitBackdropFilter: "blur(4px)",
       }}
       role="dialog"
       aria-modal="true"
@@ -80,23 +80,24 @@ export default function AppBottomSheet({ app, onClose }: AppBottomSheetProps) {
     >
       <div
         ref={sheetRef}
-        className="animate-slide-up-sheet card-glass"
+        className="animate-slide-up-sheet"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         style={{
           width: "100%",
-          borderRadius: "14px 14px 0 0",
+          background: "#162942",
+          borderRadius: "12px 12px 0 0",
           maxHeight: "85vh",
           overflowY: "auto",
-          boxShadow: "0 -8px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(0,212,255,0.08)",
-          border: "1px solid rgba(255,255,255,0.07)",
+          boxShadow: "0 -4px 24px rgba(0,0,0,0.6), 0 0 0 1px #1e3a5f",
+          border: "1px solid #1e3a5f",
           borderBottom: "none",
         }}
       >
         {/* Drag handle */}
         <div style={{ display: "flex", justifyContent: "center", padding: "12px 0 6px", cursor: "grab" }}>
-          <div style={{ width: "32px", height: "3px", background: "rgba(255,255,255,0.15)", borderRadius: "2px" }} />
+          <div style={{ width: "32px", height: "3px", background: "#1e3a5f", borderRadius: "0" }} />
         </div>
 
         <div style={{ padding: "6px 20px 36px" }}>
@@ -114,17 +115,18 @@ export default function AppBottomSheet({ app, onClose }: AppBottomSheetProps) {
               <h2
                 style={{
                   margin: 0,
-                  fontFamily: "'Sora', sans-serif",
-                  fontSize: "18px",
+                  fontFamily: "'Orbitron', sans-serif",
+                  fontSize: "15px",
                   fontWeight: 700,
                   color: "#ffffff",
-                  letterSpacing: "-0.2px",
+                  letterSpacing: "0.5px",
                   lineHeight: 1.2,
+                  textTransform: "uppercase",
                 }}
               >
                 {app.name}
               </h2>
-              <p style={{ margin: "4px 0 0", fontSize: "12px", color: "rgba(255,255,255,0.4)", fontFamily: "'DM Sans', sans-serif", fontWeight: 400 }}>
+              <p style={{ margin: "4px 0 0", fontSize: "12px", color: "#8b9bb4", fontFamily: "'Rajdhani', sans-serif", fontWeight: 500, letterSpacing: "0.2px" }}>
                 {app.subtitle}
               </p>
             </div>
@@ -134,17 +136,18 @@ export default function AppBottomSheet({ app, onClose }: AppBottomSheetProps) {
           </div>
 
           {/* Divider */}
-          <div style={{ height: "1px", background: "rgba(255,255,255,0.06)", marginBottom: "14px" }} />
+          <div style={{ height: "1px", background: "#1e3a5f", marginBottom: "14px" }} />
 
           {/* Description */}
           <p
             style={{
               margin: "0 0 16px",
               fontSize: "13px",
-              color: "rgba(255,255,255,0.6)",
-              fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 400,
+              color: "#8b9bb4",
+              fontFamily: "'Rajdhani', sans-serif",
+              fontWeight: 500,
               lineHeight: 1.7,
+              letterSpacing: "0.3px",
             }}
           >
             {app.description}
@@ -152,7 +155,7 @@ export default function AppBottomSheet({ app, onClose }: AppBottomSheetProps) {
 
           {/* Builders */}
           <div style={{ marginBottom: "20px" }}>
-            <p style={{ margin: "0 0 8px", fontFamily: "'Fragment Mono', monospace", fontSize: "9px", letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)" }}>
+            <p style={{ margin: "0 0 8px", fontFamily: "'Orbitron', sans-serif", fontSize: "9px", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: "#8b9bb4" }}>
               Built by
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
@@ -166,15 +169,16 @@ export default function AppBottomSheet({ app, onClose }: AppBottomSheetProps) {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "5px",
-                    color: "rgba(255,255,255,0.5)",
+                    color: "#8b9bb4",
                     fontSize: "12px",
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontWeight: 500,
+                    fontFamily: "'Rajdhani', sans-serif",
+                    fontWeight: 600,
+                    letterSpacing: "0.3px",
                     textDecoration: "none",
                     padding: "4px 10px",
-                    border: "1px solid rgba(255,255,255,0.07)",
-                    borderRadius: "6px",
-                    background: "rgba(255,255,255,0.03)",
+                    border: "1px solid #1e3a5f",
+                    borderRadius: "2px",
+                    background: "#0a1628",
                   }}
                 >
                   <XSmallIcon />
@@ -198,7 +202,7 @@ export default function AppBottomSheet({ app, onClose }: AppBottomSheetProps) {
               width: "100%",
               padding: "13px 24px",
               textDecoration: "none",
-              borderRadius: "8px",
+              borderRadius: "2px",
             }}
           >
             Launch App

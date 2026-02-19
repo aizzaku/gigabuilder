@@ -17,12 +17,13 @@ export default function AppCard({ app, onClick }: AppCardProps) {
     <button
       onClick={() => onClick(app)}
       aria-label={`View ${app.name} details`}
-      className="card-elevated card-hover border-gradient-hover"
+      className="card-hover pixel-border"
       style={{
         display: "flex",
         flexDirection: "column",
         width: "100%",
-        borderRadius: "10px",
+        background: "#162942",
+        borderRadius: "2px",
         overflow: "hidden",
         cursor: "pointer",
         textAlign: "left",
@@ -36,7 +37,7 @@ export default function AppCard({ app, onClick }: AppCardProps) {
           aspectRatio: "16/9",
           position: "relative",
           overflow: "hidden",
-          background: "linear-gradient(135deg, #0d1521 0%, #080d14 100%)",
+          background: "linear-gradient(135deg, #0d1f3c 0%, #0a1628 100%)",
           flexShrink: 0,
         }}
       >
@@ -45,7 +46,7 @@ export default function AppCard({ app, onClick }: AppCardProps) {
             src={previewImage}
             alt={`${app.name} screenshot`}
             fill
-            style={{ objectFit: "cover", transition: "transform 400ms ease" }}
+            style={{ objectFit: "cover", transition: "transform 300ms ease" }}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         ) : (
@@ -56,7 +57,7 @@ export default function AppCard({ app, onClick }: AppCardProps) {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              opacity: 0.2,
+              opacity: 0.15,
             }}
           >
             <Image src="/logo.png" alt="" width={48} height={48} />
@@ -71,7 +72,7 @@ export default function AppCard({ app, onClick }: AppCardProps) {
             left: 0,
             right: 0,
             height: "48px",
-            background: "linear-gradient(to top, #111925, transparent)",
+            background: "linear-gradient(to top, #162942, transparent)",
             pointerEvents: "none",
           }}
         />
@@ -84,11 +85,10 @@ export default function AppCard({ app, onClick }: AppCardProps) {
             left: "12px",
             width: "32px",
             height: "32px",
-            borderRadius: "6px",
+            borderRadius: "2px",
             overflow: "hidden",
-            border: "1px solid rgba(255,255,255,0.1)",
-            background: "#080d14",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.5)",
+            border: "1px solid #1e3a5f",
+            background: "#0a1628",
           }}
         >
           <Image
@@ -116,23 +116,25 @@ export default function AppCard({ app, onClick }: AppCardProps) {
           <h3
             style={{
               margin: 0,
-              fontFamily: "'Sora', sans-serif",
-              fontSize: "15px",
-              fontWeight: 600,
+              fontFamily: "'Orbitron', sans-serif",
+              fontSize: "13px",
+              fontWeight: 700,
               color: "#ffffff",
-              letterSpacing: "-0.2px",
+              letterSpacing: "0.5px",
               lineHeight: 1.3,
+              textTransform: "uppercase",
             }}
           >
             {app.name}
           </h3>
           <p
             style={{
-              margin: "3px 0 0",
+              margin: "4px 0 0",
               fontSize: "12px",
-              color: "rgba(255,255,255,0.45)",
-              fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 400,
+              color: "#8b9bb4",
+              fontFamily: "'Rajdhani', sans-serif",
+              fontWeight: 500,
+              letterSpacing: "0.2px",
             }}
           >
             {app.subtitle}
@@ -140,7 +142,7 @@ export default function AppCard({ app, onClick }: AppCardProps) {
         </div>
 
         {/* Tags */}
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "5px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "4px" }}>
           {app.tags.map((tag) => (
             <TagPill key={tag} tag={tag} small />
           ))}
@@ -165,22 +167,23 @@ export default function AppCard({ app, onClick }: AppCardProps) {
                 alignItems: "flex-start",
                 gap: "8px",
                 fontSize: "12px",
-                color: "rgba(255,255,255,0.5)",
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 400,
+                color: "#8b9bb4",
+                fontFamily: "'Rajdhani', sans-serif",
+                fontWeight: 500,
                 lineHeight: 1.5,
+                letterSpacing: "0.2px",
               }}
             >
               <span
                 style={{
                   color: "#00d4ff",
                   flexShrink: 0,
-                  marginTop: "4px",
-                  fontSize: "5px",
-                  lineHeight: 1,
+                  marginTop: "2px",
+                  fontSize: "8px",
+                  lineHeight: 1.5,
                 }}
               >
-                ●
+                ◆
               </span>
               {feature}
             </li>

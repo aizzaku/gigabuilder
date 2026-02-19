@@ -1,30 +1,5 @@
 import type { Metadata } from "next";
-import { Sora, DM_Sans, Fragment_Mono } from "next/font/google";
 import "./globals.css";
-
-const sora = Sora({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-display",
-  display: "swap",
-  preload: true,
-});
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-body",
-  display: "swap",
-  preload: true,
-});
-
-const fragmentMono = Fragment_Mono({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-mono",
-  display: "swap",
-  preload: true,
-});
 
 export const metadata: Metadata = {
   title: "Gigabuilder — Community Apps for Gigaverse",
@@ -47,7 +22,10 @@ export const metadata: Metadata = {
       "Discover tools, trackers, and meta-games built by the Gigaverse community.",
     site: "@playgigaverse",
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -56,9 +34,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${sora.variable} ${dmSans.variable} ${fragmentMono.variable}`}>
-      <head />
-      <body suppressHydrationWarning>{children}</body>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
