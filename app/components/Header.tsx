@@ -25,8 +25,8 @@ export default function Header() {
   return (
     <header
       style={{
-        borderBottom: "1px solid #1e3a5f",
-        background: "linear-gradient(180deg, rgba(10,22,40,1) 0%, rgba(10,22,40,0.95) 100%)",
+        borderBottom: "1px solid #0f2a3a",
+        background: "linear-gradient(180deg, rgba(6,11,20,1) 0%, rgba(6,11,20,0.95) 100%)",
         backdropFilter: "blur(8px)",
       }}
     >
@@ -38,12 +38,20 @@ export default function Header() {
           height: "64px",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
-          gap: "16px",
+          position: "relative",
         }}
       >
-        {/* Logo */}
-        <div style={{ display: "flex", alignItems: "center", gap: "10px", flexShrink: 0 }}>
+        {/* Logo — absolutely centered */}
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            transform: "translateX(-50%)",
+            display: "flex",
+            alignItems: "center",
+            gap: "10px",
+          }}
+        >
           <Image
             src="/logo.png"
             alt="Gigaverse"
@@ -53,11 +61,11 @@ export default function Header() {
           />
           <span
             style={{
-              fontFamily: "'Orbitron', sans-serif",
-              fontSize: "14px",
-              fontWeight: 700,
+              fontFamily: "'Press Start 2P', monospace",
+              fontSize: "11px",
+              fontWeight: 400,
               color: "#ffffff",
-              letterSpacing: "2px",
+              letterSpacing: "1px",
               textTransform: "uppercase",
             }}
           >
@@ -65,24 +73,8 @@ export default function Header() {
           </span>
         </div>
 
-        {/* Description */}
-        <p
-          style={{
-            color: "#8b9bb4",
-            fontSize: "13px",
-            fontFamily: "'Rajdhani', sans-serif",
-            fontWeight: 500,
-            letterSpacing: "0.3px",
-            margin: 0,
-            display: "none",
-          }}
-          className="header-desc"
-        >
-          Community-built tools for Gigaverse
-        </p>
-
-        {/* External links */}
-        <nav style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+        {/* External links — right-aligned */}
+        <nav style={{ display: "flex", alignItems: "center", gap: "4px", marginLeft: "auto" }}>
           <a
             href="https://gigaverse.io"
             target="_blank"
@@ -92,22 +84,22 @@ export default function Header() {
               display: "flex",
               alignItems: "center",
               gap: "6px",
-              color: "#8b9bb4",
+              color: "#5a7080",
               padding: "6px 10px",
               borderRadius: "2px",
               fontSize: "12px",
-              fontFamily: "'Rajdhani', sans-serif",
+              fontFamily: "'Maven Pro', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.5px",
               textDecoration: "none",
               transition: "color 150ms ease",
               whiteSpace: "nowrap",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "#00d4ff")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#8b9bb4")}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#5a7080")}
           >
             <GlobeIcon />
-            <span>Website</span>
+            <span className="header-link-label">Website</span>
           </a>
 
           <a
@@ -119,22 +111,22 @@ export default function Header() {
               display: "flex",
               alignItems: "center",
               gap: "6px",
-              color: "#8b9bb4",
+              color: "#5a7080",
               padding: "6px 10px",
               borderRadius: "2px",
               fontSize: "12px",
-              fontFamily: "'Rajdhani', sans-serif",
+              fontFamily: "'Maven Pro', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.5px",
               textDecoration: "none",
               transition: "color 150ms ease",
               whiteSpace: "nowrap",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "#00d4ff")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#8b9bb4")}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#5a7080")}
           >
             <XIcon />
-            <span>X</span>
+            <span className="header-link-label">X</span>
           </a>
 
           <a
@@ -146,11 +138,11 @@ export default function Header() {
               display: "flex",
               alignItems: "center",
               gap: "6px",
-              color: "#8b9bb4",
+              color: "#5a7080",
               padding: "6px 10px",
               borderRadius: "2px",
               fontSize: "12px",
-              fontFamily: "'Rajdhani', sans-serif",
+              fontFamily: "'Maven Pro', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.5px",
               textDecoration: "none",
@@ -158,17 +150,17 @@ export default function Header() {
               whiteSpace: "nowrap",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#7289da")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#8b9bb4")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#5a7080")}
           >
             <DiscordIcon />
-            <span>Discord</span>
+            <span className="header-link-label">Discord</span>
           </a>
         </nav>
       </div>
 
       <style>{`
-        @media (min-width: 640px) {
-          .header-desc { display: block !important; }
+        @media (max-width: 479px) {
+          .header-link-label { display: none; }
         }
       `}</style>
     </header>

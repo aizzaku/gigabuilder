@@ -67,7 +67,7 @@ export default function AppBottomSheet({ app, onClose }: AppBottomSheetProps) {
       style={{
         position: "fixed",
         inset: 0,
-        background: "rgba(0,0,0,0.8)",
+        background: "rgba(0,0,0,0.85)",
         zIndex: 1000,
         display: "flex",
         alignItems: "flex-end",
@@ -80,24 +80,22 @@ export default function AppBottomSheet({ app, onClose }: AppBottomSheetProps) {
     >
       <div
         ref={sheetRef}
-        className="animate-slide-up-sheet"
+        className="animate-slide-up-sheet card-giga"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         style={{
           width: "100%",
-          background: "#162942",
           borderRadius: "12px 12px 0 0",
           maxHeight: "85vh",
           overflowY: "auto",
-          boxShadow: "0 -4px 24px rgba(0,0,0,0.6), 0 0 0 1px #1e3a5f",
-          border: "1px solid #1e3a5f",
+          boxShadow: "0 -4px 24px rgba(0,0,0,0.6), 0 0 0 1px #0f2a3a",
           borderBottom: "none",
         }}
       >
         {/* Drag handle */}
         <div style={{ display: "flex", justifyContent: "center", padding: "12px 0 6px", cursor: "grab" }}>
-          <div style={{ width: "32px", height: "3px", background: "#1e3a5f", borderRadius: "0" }} />
+          <div style={{ width: "32px", height: "3px", background: "#0f2a3a", borderRadius: "2px" }} />
         </div>
 
         <div style={{ padding: "6px 20px 36px" }}>
@@ -115,18 +113,18 @@ export default function AppBottomSheet({ app, onClose }: AppBottomSheetProps) {
               <h2
                 style={{
                   margin: 0,
-                  fontFamily: "'Orbitron', sans-serif",
-                  fontSize: "15px",
-                  fontWeight: 700,
+                  fontFamily: "'Press Start 2P', monospace",
+                  fontSize: "11px",
+                  fontWeight: 400,
                   color: "#ffffff",
                   letterSpacing: "0.5px",
-                  lineHeight: 1.2,
+                  lineHeight: 1.6,
                   textTransform: "uppercase",
                 }}
               >
                 {app.name}
               </h2>
-              <p style={{ margin: "4px 0 0", fontSize: "12px", color: "#8b9bb4", fontFamily: "'Rajdhani', sans-serif", fontWeight: 500, letterSpacing: "0.2px" }}>
+              <p style={{ margin: "6px 0 0", fontSize: "12px", color: "#5a7080", fontFamily: "'Maven Pro', sans-serif", fontWeight: 500, letterSpacing: "0.2px" }}>
                 {app.subtitle}
               </p>
             </div>
@@ -136,15 +134,15 @@ export default function AppBottomSheet({ app, onClose }: AppBottomSheetProps) {
           </div>
 
           {/* Divider */}
-          <div style={{ height: "1px", background: "#1e3a5f", marginBottom: "14px" }} />
+          <div className="accent-line-teal" style={{ marginBottom: "14px" }} />
 
           {/* Description */}
           <p
             style={{
               margin: "0 0 16px",
               fontSize: "13px",
-              color: "#8b9bb4",
-              fontFamily: "'Rajdhani', sans-serif",
+              color: "#5a7080",
+              fontFamily: "'Maven Pro', sans-serif",
               fontWeight: 500,
               lineHeight: 1.7,
               letterSpacing: "0.3px",
@@ -155,7 +153,7 @@ export default function AppBottomSheet({ app, onClose }: AppBottomSheetProps) {
 
           {/* Builders */}
           <div style={{ marginBottom: "20px" }}>
-            <p style={{ margin: "0 0 8px", fontFamily: "'Orbitron', sans-serif", fontSize: "9px", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: "#8b9bb4" }}>
+            <p style={{ margin: "0 0 8px", fontFamily: "'Press Start 2P', monospace", fontSize: "7px", fontWeight: 400, letterSpacing: "0.15em", textTransform: "uppercase", color: "#5a7080" }}>
               Built by
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
@@ -169,16 +167,16 @@ export default function AppBottomSheet({ app, onClose }: AppBottomSheetProps) {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "5px",
-                    color: "#8b9bb4",
+                    color: "#5a7080",
                     fontSize: "12px",
-                    fontFamily: "'Rajdhani', sans-serif",
+                    fontFamily: "'Maven Pro', sans-serif",
                     fontWeight: 600,
                     letterSpacing: "0.3px",
                     textDecoration: "none",
                     padding: "4px 10px",
-                    border: "1px solid #1e3a5f",
+                    border: "1px solid #0f2a3a",
                     borderRadius: "2px",
-                    background: "#0a1628",
+                    background: "#060b14",
                   }}
                 >
                   <XSmallIcon />
@@ -193,7 +191,7 @@ export default function AppBottomSheet({ app, onClose }: AppBottomSheetProps) {
             href={app.launchUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="pixel-btn"
+            className="btn-primary"
             style={{
               display: "flex",
               alignItems: "center",

@@ -37,7 +37,7 @@ export default function HomePage() {
         display: "flex",
         flexDirection: "column",
         minHeight: "100vh",
-        background: "#0a1628",
+        background: "#060b14",
       }}
     >
       {/* Ambient background glow */}
@@ -50,7 +50,7 @@ export default function HomePage() {
           width: "600px",
           height: "300px",
           background:
-            "radial-gradient(ellipse at 50% 0%, rgba(0,212,255,0.06) 0%, transparent 70%)",
+            "radial-gradient(ellipse at 50% 0%, rgba(4,131,171,0.06) 0%, transparent 70%)",
           pointerEvents: "none",
           zIndex: 0,
         }}

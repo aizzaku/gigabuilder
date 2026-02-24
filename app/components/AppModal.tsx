@@ -47,7 +47,7 @@ export default function AppModal({ app, onClose }: AppModalProps) {
       style={{
         position: "fixed",
         inset: 0,
-        background: "rgba(0,0,0,0.8)",
+        background: "rgba(0,0,0,0.85)",
         zIndex: 1000,
         display: "flex",
         alignItems: "center",
@@ -62,16 +62,15 @@ export default function AppModal({ app, onClose }: AppModalProps) {
     >
       <div
         ref={dialogRef}
-        className="animate-slide-up pixel-border"
+        className="animate-slide-up card-giga"
         style={{
           width: "100%",
           maxWidth: "740px",
           maxHeight: "90vh",
           overflowY: "auto",
           position: "relative",
-          background: "#162942",
           borderRadius: "2px",
-          boxShadow: "0 0 0 1px #1e3a5f, 0 32px 80px rgba(0,0,0,0.7), 0 0 40px rgba(0,212,255,0.05)",
+          boxShadow: "0 0 0 1px #0f2a3a, 0 32px 80px rgba(0,0,0,0.7), 0 0 40px rgba(245,197,99,0.04)",
         }}
       >
         {/* Close button */}
@@ -85,10 +84,10 @@ export default function AppModal({ app, onClose }: AppModalProps) {
             right: "12px",
             width: "28px",
             height: "28px",
-            background: "#0a1628",
-            border: "1px solid #1e3a5f",
+            background: "#060b14",
+            border: "1px solid #0f2a3a",
             borderRadius: "2px",
-            color: "#8b9bb4",
+            color: "#5a7080",
             cursor: "pointer",
             display: "flex",
             alignItems: "center",
@@ -97,16 +96,16 @@ export default function AppModal({ app, onClose }: AppModalProps) {
             fontSize: "18px",
             lineHeight: 1,
             transition: "all 150ms ease",
-            fontFamily: "'Orbitron', sans-serif",
+            fontFamily: "'Press Start 2P', monospace",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.color = "#00d4ff";
-            e.currentTarget.style.borderColor = "#00d4ff";
-            e.currentTarget.style.boxShadow = "0 0 8px rgba(0,212,255,0.4)";
+            e.currentTarget.style.color = "#F5C563";
+            e.currentTarget.style.borderColor = "#F5C563";
+            e.currentTarget.style.boxShadow = "0 0 8px rgba(245,197,99,0.4)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.color = "#8b9bb4";
-            e.currentTarget.style.borderColor = "#1e3a5f";
+            e.currentTarget.style.color = "#5a7080";
+            e.currentTarget.style.borderColor = "#0f2a3a";
             e.currentTarget.style.boxShadow = "none";
           }}
         >
@@ -119,7 +118,7 @@ export default function AppModal({ app, onClose }: AppModalProps) {
             position: "relative",
             width: "100%",
             aspectRatio: "16/9",
-            background: "linear-gradient(135deg, #0d1f3c 0%, #0a1628 100%)",
+            background: "linear-gradient(135deg, #0a1e2e 0%, #060b14 100%)",
             overflow: "hidden",
           }}
         >
@@ -139,7 +138,7 @@ export default function AppModal({ app, onClose }: AppModalProps) {
               left: 0,
               right: 0,
               height: "80px",
-              background: "linear-gradient(to top, rgba(22,41,66,0.95), transparent)",
+              background: "linear-gradient(to top, rgba(10,30,46,0.95), transparent)",
               pointerEvents: "none",
             }}
           />
@@ -167,10 +166,10 @@ export default function AppModal({ app, onClose }: AppModalProps) {
                     transform: "translateY(-50%)",
                     width: "32px",
                     height: "32px",
-                    background: "#0a1628",
-                    border: "1px solid #1e3a5f",
+                    background: "#060b14",
+                    border: "1px solid #0f2a3a",
                     borderRadius: "2px",
-                    color: "#8b9bb4",
+                    color: "#5a7080",
                     cursor: "pointer",
                     display: "flex",
                     alignItems: "center",
@@ -180,13 +179,13 @@ export default function AppModal({ app, onClose }: AppModalProps) {
                     transition: "all 150ms ease",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = "#00d4ff";
-                    e.currentTarget.style.color = "#00d4ff";
-                    e.currentTarget.style.boxShadow = "0 0 8px rgba(0,212,255,0.4)";
+                    e.currentTarget.style.borderColor = "#F5C563";
+                    e.currentTarget.style.color = "#F5C563";
+                    e.currentTarget.style.boxShadow = "0 0 8px rgba(245,197,99,0.4)";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = "#1e3a5f";
-                    e.currentTarget.style.color = "#8b9bb4";
+                    e.currentTarget.style.borderColor = "#0f2a3a";
+                    e.currentTarget.style.color = "#5a7080";
                     e.currentTarget.style.boxShadow = "none";
                   }}
                 >
@@ -214,12 +213,12 @@ export default function AppModal({ app, onClose }: AppModalProps) {
                       width: i === activeScreenshot ? "20px" : "6px",
                       height: "4px",
                       borderRadius: "0px",
-                      background: i === activeScreenshot ? "#00d4ff" : "#1e3a5f",
+                      background: i === activeScreenshot ? "#F5C563" : "#0f2a3a",
                       border: "none",
                       cursor: "pointer",
                       padding: 0,
                       transition: "all 150ms ease",
-                      boxShadow: i === activeScreenshot ? "0 0 8px rgba(0,212,255,0.6)" : "none",
+                      boxShadow: i === activeScreenshot ? "0 0 8px rgba(245,197,99,0.6)" : "none",
                     }}
                   />
                 ))}
@@ -247,7 +246,7 @@ export default function AppModal({ app, onClose }: AppModalProps) {
                   height: "40px",
                   borderRadius: "2px",
                   overflow: "hidden",
-                  border: "1px solid #1e3a5f",
+                  border: "1px solid #0f2a3a",
                   flexShrink: 0,
                 }}
               >
@@ -257,12 +256,12 @@ export default function AppModal({ app, onClose }: AppModalProps) {
                 <h2
                   style={{
                     margin: 0,
-                    fontFamily: "'Orbitron', sans-serif",
-                    fontSize: "16px",
-                    fontWeight: 700,
+                    fontFamily: "'Press Start 2P', monospace",
+                    fontSize: "12px",
+                    fontWeight: 400,
                     color: "#ffffff",
                     letterSpacing: "0.5px",
-                    lineHeight: 1.2,
+                    lineHeight: 1.5,
                     textTransform: "uppercase",
                   }}
                 >
@@ -270,10 +269,10 @@ export default function AppModal({ app, onClose }: AppModalProps) {
                 </h2>
                 <p
                   style={{
-                    margin: "4px 0 0",
+                    margin: "6px 0 0",
                     fontSize: "12px",
-                    color: "#8b9bb4",
-                    fontFamily: "'Rajdhani', sans-serif",
+                    color: "#5a7080",
+                    fontFamily: "'Maven Pro', sans-serif",
                     fontWeight: 500,
                     letterSpacing: "0.2px",
                   }}
@@ -289,21 +288,15 @@ export default function AppModal({ app, onClose }: AppModalProps) {
           </div>
 
           {/* Divider */}
-          <div
-            style={{
-              height: "1px",
-              background: "#1e3a5f",
-              marginBottom: "16px",
-            }}
-          />
+          <div className="accent-line-teal" style={{ marginBottom: "16px" }} />
 
           {/* Description */}
           <p
             style={{
               margin: "0 0 20px",
               fontSize: "13px",
-              color: "#8b9bb4",
-              fontFamily: "'Rajdhani', sans-serif",
+              color: "#5a7080",
+              fontFamily: "'Maven Pro', sans-serif",
               fontWeight: 500,
               lineHeight: 1.7,
               letterSpacing: "0.3px",
@@ -317,12 +310,12 @@ export default function AppModal({ app, onClose }: AppModalProps) {
             <p
               style={{
                 margin: "0 0 10px",
-                fontFamily: "'Orbitron', sans-serif",
-                fontSize: "9px",
-                fontWeight: 600,
-                letterSpacing: "0.2em",
+                fontFamily: "'Press Start 2P', monospace",
+                fontSize: "8px",
+                fontWeight: 400,
+                letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                color: "#00d4ff",
+                color: "#F5C563",
               }}
             >
               Key Features
@@ -345,14 +338,14 @@ export default function AppModal({ app, onClose }: AppModalProps) {
                     alignItems: "flex-start",
                     gap: "8px",
                     fontSize: "12px",
-                    color: "#8b9bb4",
-                    fontFamily: "'Rajdhani', sans-serif",
+                    color: "#5a7080",
+                    fontFamily: "'Maven Pro', sans-serif",
                     fontWeight: 500,
                     lineHeight: 1.5,
                     letterSpacing: "0.2px",
                   }}
                 >
-                  <span style={{ color: "#00d4ff", fontSize: "8px", flexShrink: 0, marginTop: "3px" }}>◆</span>
+                  <span style={{ color: "#F5C563", fontSize: "8px", flexShrink: 0, marginTop: "3px" }}>◆</span>
                   {f}
                 </li>
               ))}
@@ -360,7 +353,7 @@ export default function AppModal({ app, onClose }: AppModalProps) {
           </div>
 
           {/* Divider */}
-          <div style={{ height: "1px", background: "#1e3a5f", marginBottom: "18px" }} />
+          <div className="accent-line-teal" style={{ marginBottom: "18px" }} />
 
           {/* Builders + launch */}
           <div
@@ -376,12 +369,12 @@ export default function AppModal({ app, onClose }: AppModalProps) {
               <p
                 style={{
                   margin: "0 0 8px",
-                  fontFamily: "'Orbitron', sans-serif",
-                  fontSize: "9px",
-                  fontWeight: 600,
-                  letterSpacing: "0.2em",
+                  fontFamily: "'Press Start 2P', monospace",
+                  fontSize: "7px",
+                  fontWeight: 400,
+                  letterSpacing: "0.15em",
                   textTransform: "uppercase",
-                  color: "#8b9bb4",
+                  color: "#5a7080",
                 }}
               >
                 Built by
@@ -397,26 +390,26 @@ export default function AppModal({ app, onClose }: AppModalProps) {
                       display: "inline-flex",
                       alignItems: "center",
                       gap: "5px",
-                      color: "#8b9bb4",
+                      color: "#5a7080",
                       fontSize: "12px",
-                      fontFamily: "'Rajdhani', sans-serif",
+                      fontFamily: "'Maven Pro', sans-serif",
                       fontWeight: 600,
                       letterSpacing: "0.3px",
                       textDecoration: "none",
                       padding: "4px 10px",
-                      border: "1px solid #1e3a5f",
+                      border: "1px solid #0f2a3a",
                       borderRadius: "2px",
-                      background: "#0a1628",
+                      background: "#060b14",
                       transition: "all 150ms ease",
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.color = "#00d4ff";
-                      e.currentTarget.style.borderColor = "#00d4ff";
-                      e.currentTarget.style.boxShadow = "0 0 8px rgba(0,212,255,0.3)";
+                      e.currentTarget.style.color = "#F5C563";
+                      e.currentTarget.style.borderColor = "#F5C563";
+                      e.currentTarget.style.boxShadow = "0 0 8px rgba(245,197,99,0.3)";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.color = "#8b9bb4";
-                      e.currentTarget.style.borderColor = "#1e3a5f";
+                      e.currentTarget.style.color = "#5a7080";
+                      e.currentTarget.style.borderColor = "#0f2a3a";
                       e.currentTarget.style.boxShadow = "none";
                     }}
                   >
@@ -431,7 +424,7 @@ export default function AppModal({ app, onClose }: AppModalProps) {
               href={app.launchUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="pixel-btn"
+              className="btn-primary"
               style={{
                 display: "inline-flex",
                 alignItems: "center",

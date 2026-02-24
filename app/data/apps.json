@@ -30,10 +30,10 @@
     ]
   },
   {
-    "slug": "giganoob",
-    "name": "Giga Noob",
+    "slug": "gigascanner",
+    "name": "Giga Scanner",
     "subtitle": "Ultimate Gigaverse Dashboard",
-    "description": "Real-time analytics dashboard centralizing every financial and engagement metric that matters in Gigaverse. From revenue flows to loot box probabilities, Giga Noob surfaces the data hidden inside the game into a clean, actionable interface.",
+    "description": "Real-time analytics dashboard centralizing every financial and engagement metric that matters in Gigaverse. From revenue flows to loot box probabilities, Giga Scanner surfaces the data hidden inside the game into a clean, actionable interface.",
     "builders": [
       { "name": "Nomad", "handle": "@NomadTreepwood", "twitterUrl": "https://x.com/NomadTreepwood" }
     ],
@@ -45,8 +45,8 @@
     ],
     "tags": ["Analytics"],
     "status": "active",
-    "launchUrl": "https://giganoob.com/",
-    "logo": "/images/giganoob logo.png",
+    "launchUrl": "https://gigascanner.com/",
+    "logo": "/images/gigascanner logo.png",
     "screenshots": [
       "/images/giganoob (1).png",
       "/images/giganoob (2).png",

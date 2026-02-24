@@ -17,12 +17,11 @@ export default function AppCard({ app, onClick }: AppCardProps) {
     <button
       onClick={() => onClick(app)}
       aria-label={`View ${app.name} details`}
-      className="card-hover pixel-border"
+      className="card-giga-hover"
       style={{
         display: "flex",
         flexDirection: "column",
         width: "100%",
-        background: "#162942",
         borderRadius: "2px",
         overflow: "hidden",
         cursor: "pointer",
@@ -34,10 +33,10 @@ export default function AppCard({ app, onClick }: AppCardProps) {
       <div
         style={{
           width: "100%",
-          aspectRatio: "16/9",
+          aspectRatio: "5/2",
           position: "relative",
           overflow: "hidden",
-          background: "linear-gradient(135deg, #0d1f3c 0%, #0a1628 100%)",
+          background: "linear-gradient(135deg, #0a1e2e 0%, #060b14 100%)",
           flexShrink: 0,
         }}
       >
@@ -72,7 +71,7 @@ export default function AppCard({ app, onClick }: AppCardProps) {
             left: 0,
             right: 0,
             height: "48px",
-            background: "linear-gradient(to top, #162942, transparent)",
+            background: "linear-gradient(to top, #0a1e2e, transparent)",
             pointerEvents: "none",
           }}
         />
@@ -87,8 +86,8 @@ export default function AppCard({ app, onClick }: AppCardProps) {
             height: "32px",
             borderRadius: "2px",
             overflow: "hidden",
-            border: "1px solid #1e3a5f",
-            background: "#0a1628",
+            border: "1px solid #0f2a3a",
+            background: "#060b14",
           }}
         >
           <Image
@@ -116,12 +115,12 @@ export default function AppCard({ app, onClick }: AppCardProps) {
           <h3
             style={{
               margin: 0,
-              fontFamily: "'Orbitron', sans-serif",
-              fontSize: "13px",
-              fontWeight: 700,
+              fontFamily: "'Press Start 2P', monospace",
+              fontSize: "10px",
+              fontWeight: 400,
               color: "#ffffff",
               letterSpacing: "0.5px",
-              lineHeight: 1.3,
+              lineHeight: 1.6,
               textTransform: "uppercase",
             }}
           >
@@ -129,10 +128,10 @@ export default function AppCard({ app, onClick }: AppCardProps) {
           </h3>
           <p
             style={{
-              margin: "4px 0 0",
+              margin: "6px 0 0",
               fontSize: "12px",
-              color: "#8b9bb4",
-              fontFamily: "'Rajdhani', sans-serif",
+              color: "#5a7080",
+              fontFamily: "'Maven Pro', sans-serif",
               fontWeight: 500,
               letterSpacing: "0.2px",
             }}
@@ -167,8 +166,8 @@ export default function AppCard({ app, onClick }: AppCardProps) {
                 alignItems: "flex-start",
                 gap: "8px",
                 fontSize: "12px",
-                color: "#8b9bb4",
-                fontFamily: "'Rajdhani', sans-serif",
+                color: "#5a7080",
+                fontFamily: "'Maven Pro', sans-serif",
                 fontWeight: 500,
                 lineHeight: 1.5,
                 letterSpacing: "0.2px",
@@ -176,7 +175,7 @@ export default function AppCard({ app, onClick }: AppCardProps) {
             >
               <span
                 style={{
-                  color: "#00d4ff",
+                  color: "#F5C563",
                   flexShrink: 0,
                   marginTop: "2px",
                   fontSize: "8px",
